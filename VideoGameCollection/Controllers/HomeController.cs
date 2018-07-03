@@ -13,8 +13,12 @@ namespace VideoGameCollection.Controllers
         // GET: VideoGames
         public ActionResult Index()
         {
-            return View(db.VideoGames.ToList());
+            VideoGameViewModel videoGame = new VideoGameViewModel(db.VideoGames.ToList());
+
+            return View(videoGame);
         }
+
+        
 
         // GET: VideoGames/Details/5
         public ActionResult Details(int? id)
@@ -68,8 +72,6 @@ namespace VideoGameCollection.Controllers
         }
 
         // POST: VideoGames/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,GameTitle,Console,Favorite")] VideoGame videoGame)

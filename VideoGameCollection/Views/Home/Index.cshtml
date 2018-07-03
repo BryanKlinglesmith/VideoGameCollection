@@ -1,4 +1,4 @@
-﻿@model IEnumerable<VideoGameCollection.Models.VideoGame>
+﻿@model VideoGameCollection.Models.VideoGameViewModel
 
 @{
     ViewBag.Title = "Home Page";
@@ -38,7 +38,7 @@
                     <th>&nbsp;</th>
                 </tr>
                 
-                @foreach (var item in Model)
+                @foreach (var item in Model.Playstations)
                 {
                     <tr>
                         <td>@Html.DisplayFor(modelItem => item.GameTitle)</td>
@@ -60,11 +60,61 @@
         </div>
         <div class="col-lg-4 col-md-6 bg-success text-white">
             <h2 class="text-center">XBox One Games</h2>
-            <p>This is placeholder text until i figure out how to show the sorted games from my database</p>
+            <table class="table">
+                <tr>
+                    <th>Game</th>
+                    <th>Favorite</th>
+                    <th>&nbsp;</th>
+                </tr>
+
+                @foreach (var item in Model.XBoxs)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.GameTitle)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Favorite)</td>
+                        <td>
+                            <div class="pull-right">
+                                <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-warning btn-sm margin-right">
+                                    <span class="glyphicon glyphicon-edit"></span><span class="hidden-xs"> Edit</span>
+                                </a>
+                                <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-danger btn-sm">
+                                    <span class="glyphicon glyphicon-trash"></span><span class="hidden-xs"> Delete</span>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+
+            </table>
         </div>
         <div class="col-lg-4 col-md-12 bg-danger text-white">
             <h2 class="text-center">Nintendo Switch Games</h2>
-            <p>This is placeholder text until i figure out how to show the sorted games from my database</p>
+            <table class="table">
+                <tr>
+                    <th>Game</th>
+                    <th>Favorite</th>
+                    <th>&nbsp;</th>
+                </tr>
+
+                @foreach (var item in Model.Switchs)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.GameTitle)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Favorite)</td>
+                        <td>
+                            <div class="pull-right">
+                                <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-warning btn-sm margin-right">
+                                    <span class="glyphicon glyphicon-edit"></span><span class="hidden-xs"> Edit</span>
+                                </a>
+                                <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-danger btn-sm">
+                                    <span class="glyphicon glyphicon-trash"></span><span class="hidden-xs"> Delete</span>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+
+            </table>
         </div>
     </div>
 </div>
