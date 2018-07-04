@@ -5,48 +5,52 @@
 }
 
 <h2>Delete</h2>
-<div class="delete-container">
-    <div class="alert alert-danger">
+
+    <div class="alert alert-danger text-center">
         Are you sure you want to delete the following entry?
     </div>
-    <div>
-        <h4>VideoGame</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.GameTitle)
-            </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.GameTitle)
-            </dd>
+    <div class="delete-container">
+        <div class="row">
+            <div class="col-lg-6 offset-5 pt-4">
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Console)
-            </dt>
+                <div class="row">
+                    <div class="col-xs-4 col-sm-3 text-danger">
+                        @Html.DisplayNameFor(model => model.GameTitle)
+                    </div>
+                    <div class="col-xs-8 col-sm-9">
+                        @Html.DisplayFor(model => model.GameTitle)
+                    </div>
+                </div>
 
-            <dd>
-                @Html.DisplayFor(model => model.Console)
-            </dd>
+                <div class="row">
+                    <div class="col-xs-4 col-sm-3 text-danger">
+                        @Html.DisplayNameFor(model => model.Console)
+                    </div>
+                    <div class="col-xs-8 col-sm-9">
+                        @Html.DisplayFor(model => model.Console)
+                    </div>
+                </div>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Favorite)
-            </dt>
+                <div class="row">
+                    <div class="col-xs-4 col-sm-3 text-danger">
+                        @Html.DisplayNameFor(model => model.Favorite)
+                    </div>
+                    <div class="col-xs-8 col-sm-9">
+                        @Html.DisplayFor(model => model.Favorite)
+                    </div>
+                </div>
 
-            <dd>
-                @Html.DisplayFor(model => model.Favorite)
-            </dd>
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
 
-        </dl>
-
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
-
-            <div class="form-actions no-color">
-                <input type="submit" value="Delete" class="btn btn-default" /> |
-                @Html.ActionLink("Back to List", "Index")
+                    <div class="form-actions no-color pt-4 ml-lg-5">
+                        <input type="submit" value="Delete" class="btn btn-danger btn-lg margin-right" /> |
+                        <a href="@Url.Action("Index")" class="btn btn-warning btn-lg">
+                            <span class="glyphicon glyphicon-remove"></span> Cancel
+                        </a>
+                    </div>
+                }
             </div>
-        }
-    </div>
-</div>
+        </div>
