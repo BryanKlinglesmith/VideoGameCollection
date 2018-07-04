@@ -157,7 +157,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\GameConsole.cs" />
-    <Compile Include="Models\Ps4List.cs" />
     <Compile Include="Models\VideoGame.cs" />
     <Compile Include="Models\VideoGameViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

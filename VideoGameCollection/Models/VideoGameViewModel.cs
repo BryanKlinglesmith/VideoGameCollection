@@ -8,6 +8,7 @@ namespace VideoGameCollection.Models
     public class VideoGameViewModel
     {
         private List<VideoGame> _videoGames;
+
         public VideoGameViewModel(List<VideoGame> videoGames)
         {
             _videoGames = videoGames;
