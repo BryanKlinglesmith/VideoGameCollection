@@ -12,24 +12,20 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12 col-md-3 pl-lg-4">
+        <div class="col-sm-12 col-md-6 pl-lg-4">
             <a href="@Url.Action("Create")"
                class="btn btn-lg btn-warning">
                 Add a new game
             </a>
         </div>
-        <p class="col-md-3 text-center pt-3">
+        <p class="col-md-6 text-center pt-3">
             <b>Sort By:</b>  @Html.RadioButton("rbGrp", "searchBy", true) All
             @Html.RadioButton("rbGrp", "favorite") Favorites
 
         </p>
-        <p class="col-md-6 text-center pt-3">
-            @Html.TextBox("search") <input type="submit" value="Search" />
-            (This is to search for games already in your collection.)
-        </p>
     </div>
     <div class="row height">
-        <div class="col-lg-4 col-md-6 bg-primary text-white ">
+        <div class="col-lg-4 col-md-6 col-sm-12 bg-primary text-white ">
             <h2 class="text-center">Playstation Games</h2>
             <table class="table">
                 <tr>
@@ -58,7 +54,7 @@
                 
             </table>
         </div>
-        <div class="col-lg-4 col-md-6 bg-success text-white">
+        <div class="col-lg-4 col-md-6 col-sm-12 bg-success text-white">
             <h2 class="text-center">XBox One Games</h2>
             <table class="table">
                 <tr>

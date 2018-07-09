@@ -27,9 +27,8 @@ textarea {
     max-width: 280px;
 }
 
-.delete-container {
-    background-color: #4a4b4c;
-    color: white;
+.grey-background {
+    background-color: #6c6c6c;
 }
 
 .button-background{
