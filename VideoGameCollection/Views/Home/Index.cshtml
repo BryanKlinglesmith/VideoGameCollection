@@ -26,16 +26,16 @@
         </div>
     </div>
     <div class="row height">
-        <div class="col-lg-4 col-md-6 col-sm-12 bg-primary text-white ">
+        <div class="col-lg-4 col-md-6 col-sm-12 bg-primary text-white display-list">
             <h2 class="text-center">Playstation Games</h2>
-            <div class="list">
+            <div>
                 <table class="table">
                     <tr>
                         <th>Game</th>
                         <th>Favorite</th>
                         <th>&nbsp;</th>
                     </tr>
-                
+
                     @foreach (var item in Model.Playstations)
                     {
                         <tr>
@@ -53,13 +53,13 @@
                             </td>
                         </tr>
                     }
-                
+
                 </table>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 bg-success text-white">
+        <div class="col-lg-4 col-md-6 col-sm-12 bg-success text-white display-list">
             <h2 class="text-center">XBox One Games</h2>
-            <div class="list">
+            <div>
                 <table class="table">
                     <tr>
                         <th>Game</th>
@@ -88,9 +88,9 @@
                 </table>
             </div>
         </div>
-        <div class="col-lg-4 col-md-12 bg-danger text-white">
+        <div class="col-lg-4 col-md-12 bg-danger text-white display-list">
             <h2 class="text-center">Nintendo Switch Games</h2>
-            <div class="list">
+            <div>
                 <table class="table">
                     <tr>
                         <th>Game</th>
@@ -117,7 +117,103 @@
                     }
 
                 </table>
-            </div=">
+            </div>
+        </div>
+
+
+            <div class="col-lg-4 col-md-6 col-sm-12 bg-primary text-white list">
+                <h2 class="text-center">Playstation Games</h2>
+                <div>
+                    <table class="table">
+                        <tr>
+                            <th>Game</th>
+                            <th>Favorite</th>
+                            <th>&nbsp;</th>
+                        </tr>
+
+                        @foreach (var item in Model.FavPs4s)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.GameTitle)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Favorite)</td>
+                                <td>
+                                    <div class="pull-right">
+                                        <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-warning btn-sm margin-right">
+                                            <span class="glyphicon glyphicon-edit"></span><span class="hidden-xs"> Edit</span>
+                                        </a>
+                                        <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-danger btn-sm">
+                                            <span class="glyphicon glyphicon-trash"></span><span class="hidden-xs"> Delete</span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 bg-success text-white list">
+                <h2 class="text-center">XBox One Games</h2>
+                <div>
+                    <table class="table">
+                        <tr>
+                            <th>Game</th>
+                            <th>Favorite</th>
+                            <th>&nbsp;</th>
+                        </tr>
+
+                        @foreach (var item in Model.FavXb1s)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.GameTitle)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Favorite)</td>
+                                <td>
+                                    <div class="pull-right">
+                                        <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-warning btn-sm margin-right">
+                                            <span class="glyphicon glyphicon-edit"></span><span class="hidden-xs"> Edit</span>
+                                        </a>
+                                        <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-danger btn-sm">
+                                            <span class="glyphicon glyphicon-trash"></span><span class="hidden-xs"> Delete</span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 bg-danger text-white list">
+                <h2 class="text-center">Nintendo Switch Games</h2>
+                <div>
+                    <table class="table">
+                        <tr>
+                            <th>Game</th>
+                            <th>Favorite</th>
+                            <th>&nbsp;</th>
+                        </tr>
+
+                        @foreach (var item in Model.FavSwitchs)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.GameTitle)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Favorite)</td>
+                                <td>
+                                    <div class="pull-right">
+                                        <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-warning btn-sm margin-right">
+                                            <span class="glyphicon glyphicon-edit"></span><span class="hidden-xs"> Edit</span>
+                                        </a>
+                                        <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-dark btn-sm">
+                                            <span class="glyphicon glyphicon-trash"></span><span class="hidden-xs"> Delete</span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </div>
+
         </div>
     </div>
-</div>

@@ -39,3 +39,7 @@ textarea {
 .list{
     display: none;
 }
+
+.display-list{
+    display:block;
+}

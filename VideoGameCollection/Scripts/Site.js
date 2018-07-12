@@ -1,5 +1,4 @@
-﻿$(document).ready(function () {
-    $("FavoritesChecked").click(function () {
-        $(".list").toggle();
+﻿
+    $("#FavoritesChecked").click(function () {
+        $('.list, .display-list').toggleClass('list').toggleClass('display-list');
     });
-});
