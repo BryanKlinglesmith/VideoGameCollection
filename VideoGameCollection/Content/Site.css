@@ -34,3 +34,12 @@ textarea {
 .button-background{
     background-color: white;
 }
+
+/* A class to allow a toggle view when favorites is checked*/
+.list{
+    display: none;
+}
+
+.display-list{
+    display:block;
+}

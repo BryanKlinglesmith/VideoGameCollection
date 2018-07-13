@@ -18,23 +18,6 @@ namespace VideoGameCollection.Controllers
             return View(videoGame);
         }
 
-        
-
-        // GET: VideoGames/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            VideoGame videoGame = db.VideoGames.Find(id);
-            if (videoGame == null)
-            {
-                return HttpNotFound();
-            }
-            return View(videoGame);
-        }
-
         // GET: VideoGames/Create
         public ActionResult Create()
         {
