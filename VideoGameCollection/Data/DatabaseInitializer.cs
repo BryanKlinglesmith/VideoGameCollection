@@ -35,6 +35,85 @@ namespace VideoGameCollection
                 Favorite = false
             });
 
+            videoGames.Add(new VideoGame()
+            {
+                GameTitle = "Detroit Become Human",
+                Console = "PS4",
+                Favorite = false
+            });
+
+            videoGames.Add(new VideoGame()
+            {
+                GameTitle = "Forza Motorsports 6",
+                Console = "XB1",
+                Favorite = false
+            });
+
+            videoGames.Add(new VideoGame()
+            {
+                GameTitle = "Zelda Breath of the Wild",
+                Console = "SWITCH",
+                Favorite = true
+            });
+
+            videoGames.Add(new VideoGame()
+            {
+                GameTitle = "NBA 2K18",
+                Console = "PS4",
+                Favorite = false
+            });
+
+            videoGames.Add(new VideoGame()
+            {
+                GameTitle = "Fallout 4",
+                Console = "XB1",
+                Favorite = false
+            });
+
+            videoGames.Add(new VideoGame()
+            {
+                GameTitle = "Assassin's Creed Odyssey",
+                Console = "PS4",
+                Favorite = true
+            });
+
+            videoGames.Add(new VideoGame()
+            {
+                GameTitle = "Forza Horizon 3",
+                Console = "XB1",
+                Favorite = false
+            });
+
+            videoGames.Add(new VideoGame()
+            {
+                GameTitle = "Horizon Zero Dawn",
+                Console = "PS4",
+                Favorite = true
+            });
+
+            videoGames.Add(new VideoGame()
+            {
+                GameTitle = "Red Dead Redemption",
+                Console = "XB1",
+                Favorite = true
+            });
+
+            videoGames.Add(new VideoGame()
+            {
+                GameTitle = "Minecraft",
+                Console = "SWITCH",
+                Favorite = true
+            });
+
+            videoGames.Add(new VideoGame()
+            {
+                GameTitle = "Stardew Valley",
+                Console = "SWITCH",
+                Favorite = false
+            });
+
+
+
             context.VideoGames.AddRange(videoGames);
 
             context.SaveChanges();
