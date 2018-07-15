@@ -4,54 +4,57 @@
 {
     @Html.AntiForgeryToken()
 
-<div class="col-md-4 offset-md-4 bg-info text-light">
+<div class="create-view">
 
-    <div class="form-horizontal">
-        <h4 class="text-center">VideoGame</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group row">
-            @Html.LabelFor(model => model.GameTitle, htmlAttributes: new { @class = "control-label col-md-5 text-right" })
-            <div class="col-md-7 ">
-                @Html.EditorFor(model => model.GameTitle, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.GameTitle, "", new { @class = "text-danger" })
-            </div>
-        </div>
+    <div class="col-md-4 offset-md-4 pt-3 bg-info text-light">
 
-        <div class="form-group row">
-            @Html.LabelFor(model => model.Console, htmlAttributes: new { @class = "control-label col-md-5 text-right" })
-            <div class="col-md-7">
-                @Html.DropDownListFor(model => model.Console,
-                    VideoGameCollection.Models.GameConsole.GetConsoleTypesList() , new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Console, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group row">
-            @Html.LabelFor(model => model.Favorite, htmlAttributes: new { @class = "control-label col-md-5 text-right" })
-            <div class="col-md-7">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Favorite)
-                    @Html.ValidationMessageFor(model => model.Favorite, "", new { @class = "text-danger" })
+        <div class="form-horizontal">
+            <h4 class="text-md-center">VideoGame</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "bg-danger" })
+            <div class="form-group row">
+                @Html.LabelFor(model => model.GameTitle, htmlAttributes: new { @class = "control-label col-md-5 text-md-right" })
+                <div class="col-md-7 ">
+                    @Html.EditorFor(model => model.GameTitle, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.GameTitle, "", new { @class = "bg-danger" })
                 </div>
             </div>
-        </div>
 
-        <div class="form-group col">
-            <div class="col-md-4 offset-md-4 text-center pb-1">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="form-group row">
+                @Html.LabelFor(model => model.Console, htmlAttributes: new { @class = "control-label col-md-5 text-md-right" })
+                <div class="col-md-7">
+                    @Html.DropDownListFor(model => model.Console,
+                        VideoGameCollection.Models.GameConsole.GetConsoleTypesList() , new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Console, "", new { @class = "text-danger" })
+                </div>
             </div>
-            <div class="col-md-4 offset-md-4 text-center pt-1">
-                <button class="btn btn-secondary" onclick="location.href='@Url.Action("Index")';return false;">Cancel</button>
+
+            <div class="form-group row">
+                @Html.LabelFor(model => model.Favorite, htmlAttributes: new { @class = "control-label col-md-5 text-md-right" })
+                <div class="col-md-7">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.Favorite)
+                        @Html.ValidationMessageFor(model => model.Favorite, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col">
+                <div class="col-md-4 offset-md-4 text-md-center pb-1">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+                <div class="col-md-4 offset-md-4 text-md-center pt-1 pb-4">
+                    <button class="btn btn-secondary" onclick="location.href='@Url.Action("Index")';return false;">Cancel</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-}
+    }
 
-    
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
 

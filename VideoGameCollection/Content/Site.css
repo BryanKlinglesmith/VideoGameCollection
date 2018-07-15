@@ -3,6 +3,7 @@
     padding-bottom: 20px;
 }
 
+/* This class allows the columns to over the full screen height even when empty*/
 .height {
     height: 100vh;
 }
@@ -24,15 +25,16 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 350px;
 }
 
-.grey-background {
-    background-color: #6c6c6c;
+.silver-background {
+    background-color: silver;
 }
 
-.button-background{
-    background-color: white;
+.create-view {
+    height: 80vh;
+    background-color: silver
 }
 
 /* A class to allow a toggle view when favorites is checked*/
@@ -43,3 +45,5 @@ textarea {
 .display-list{
     display:block;
 }
+
+

@@ -1,9 +1,10 @@
 ﻿@model VideoGameCollection.Models.VideoGame
 
 @{
-    ViewBag.Title = "Add";
+    ViewBag.Title = "Add a New Game to your collection";
 }
+    <h2 class="text-md-center">@ViewBag.Title</h2>
 
-<h2>@ViewBag.Title</h2>
+    @Html.Partial("_EntryForm")
 
-@Html.Partial("_EntryForm")
+
