@@ -10,6 +10,11 @@ namespace VideoGameCollection
     public class DatabaseInitializer
         : DropCreateDatabaseIfModelChanges<Context>
     {
+        /// <summary>
+        /// This class is used to seed the database with data on the initial setup
+        /// and also reseeds the database if a change is made to the database model
+        /// </summary>
+       
         protected override void Seed(Context context)
         {
             IList<VideoGame> videoGames = new List<VideoGame>();

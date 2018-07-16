@@ -3,9 +3,9 @@
     padding-bottom: 20px;
 }
 
-/* This class allows the columns to over the full screen height even when empty*/
+/* This class allows the columns on the index view page to display full screen height even when empty*/
 .height {
-    height: 100vh;
+    height: 80vh;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -32,12 +32,13 @@ textarea {
     background-color: silver;
 }
 
+/*some basic styling to fill the screen while in the create, edit or delete view page*/
 .create-view {
     height: 80vh;
     background-color: silver
 }
 
-/* A class to allow a toggle view when favorites is checked*/
+/* These two classes allow the views to toggle between the two tables when the favorites box is checked*/
 .list{
     display: none;
 }

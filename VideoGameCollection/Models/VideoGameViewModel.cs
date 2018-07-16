@@ -7,6 +7,11 @@ namespace VideoGameCollection.Models
 {
     public class VideoGameViewModel
     {
+        /// <summary>
+        /// I'm  using this class to display all all of the data sorted into lists by
+        /// console and by console and favorite
+        /// </summary>
+
         private List<VideoGame> _videoGames;
 
         public VideoGameViewModel(List<VideoGame> videoGames)

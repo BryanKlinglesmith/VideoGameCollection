@@ -9,7 +9,7 @@ namespace VideoGameCollection.Models
     public class GameConsole
     {
         /// <summary>
-        /// This is just a list of Game consoles that I am using for a drop down list when creating a new game or editing an existing one
+        /// This is a list of Game consoles that I am using for a drop down list when creating a new game or editing an existing one
         /// </summary>
 
         public static IEnumerable<SelectListItem> GetConsoleTypesList()
