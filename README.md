@@ -12,5 +12,5 @@ custom css to fix some things I didn't like
 
 ```
 
-To run this app, Download the repository and open in Visual Studio. 
+To run this app, Download the repository and open in Visual Studio on the /home/index view. 
 Click run.
